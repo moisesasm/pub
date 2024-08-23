@@ -1,15 +1,15 @@
-$fn=100;//resolução 
+$fn=100;//difinir resolução 
 //https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features
 
 sphere(r=1); //r = raio
 sphere(d=1); //d = diâmetro
-
+-----------------------
 cylinder(h=3,r1=3, r2=3);// r(n) = raio 1 ex: r1=3,r2=3
 cylinder(h=3,r=2);
 cylinder(3,d=2);
-
 cylinder(h=3,d=2, center=true);
 
+--------------------
 cube([2]);
 cube([3,2,1]);
 cube([3,2,1],center=true);
@@ -23,7 +23,7 @@ cube([3,2,1]);
 translate([0,$t*4,0]) 
 rotate([0,$t*90,0]) 
 cube([3,2,1]);
-
+---------------------
 text("IFSP");
 
 linear_extrude(height=5, convexity=4)
@@ -48,12 +48,12 @@ intersection(){
     cube([2]);
     sphere(1);
 }
-
+------------------
 module meu_modulo(){
     text("IFSP", size=4);
 }
 meu_modulo();
-    
+-----------    
 module meu_modulo2(tamanho){
     text("IFSP", size=tamanho);
 }
@@ -68,7 +68,7 @@ rotate_extrude(angle=$t*180) {
         translate([20,0,0])
         circle(d=5);
     }
-    
+ ---------------------   
 variavel=15;
 module roda(){
     rotate_extrude(angle=360) { //linha externa
@@ -83,6 +83,8 @@ module roda(){
 }
 roda();
 
+-------------------------------
+variavel=15;
 difference(){
    roda();
     for(i=[0:45:359]){

@@ -83,8 +83,6 @@ module roda(){
 }
 roda();
 
--------------------------------
-variavel=15;
 difference(){
    roda();
     for(i=[0:45:359]){
@@ -93,7 +91,7 @@ difference(){
     }
 }
 
-
+------------------------------
 //Gears:
 
 module gear(teeth, step, height=0.2) {

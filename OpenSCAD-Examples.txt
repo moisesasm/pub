@@ -25,7 +25,7 @@ rotate([0,$t*90,0])
 cube([3,2,1]);
 ---------------------
 text("IFSP");
-
+----------
 linear_extrude(height=5, convexity=4)
 text("IFSP", 
      size=4,
@@ -33,17 +33,17 @@ text("IFSP",
      halign="center",
      valign="center");
                      
-                     
+-------------------------                     
 union(){
     cube([2]);
     sphere(1);
 }
-
+---------------
 difference(){
     sphere(1);
     cube([2]);
 }
-
+---------------
 intersection(){
     cube([2]);
     sphere(1);
